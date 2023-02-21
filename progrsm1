@@ -1,0 +1,14 @@
+Program to input a decimal digit and print it in words
+def ToDigits(n, arr):
+	if (n == 0):
+		return
+	digit = n % 10
+	n = n // 10
+	ToDigits(n, arr)
+	print(arr[digit] , end = " ")
+
+arr = [ "zero", "one", "two", "three", "four",
+			"five", "six", "seven", "eight", "nine" ]
+n = 123 #it can be changed to take user input
+
+ToDigits(n, arr)
